@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: calc(1em + 0.5rem);
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    overflow-wrap: break-word;
+}
+
+ul[role='list'] {
+    list-style: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg,
+iframe {
+    display: block;
+    max-width: 100%;
+}
+
+a:not([class]) {
+    text-decoration: none;
+}
+
+a,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+    touch-action: manipulation;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+:where(button, [type='button' i], [type='reset' i], [type='submit' i]) {
+    -webkit-appearance: button;
+}
+
+small {
+    font-size: 80%;
+}
+
+/* Table deafults */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    caption-side: bottom;
+}
+
+/*  */
+
+textarea {
+    white-space: revert;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html:focus-within {
+        scroll-behavior: smooth;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
